@@ -10,3 +10,9 @@ then
 else
 	echo "RAM Space is sufficient, it is $FREE_SPACE MB"
 fi
+
+####################################
+PID for a particular process
+echo "enter the user name for u want all the processes"
+read username
+ps -ef | grep "$username" | awk '{print $2}'
